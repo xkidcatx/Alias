@@ -17,13 +17,13 @@ class RulesViewController: UIViewController {
     }
     
     @IBAction func stopMusic(_ sender: UIBarButtonItem) {
-//        if startVC.player.isPlaying {
-//            startVC.player!.pause()
-//            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .pause, target: self, action: #selector(stopMusic))
-//        } else {
-//            startVC.player!.play()
-//            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(stopMusic))
-//        }
+        if player.isPlaying {
+            player.pause()
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .pause, target: self, action: #selector(stopMusic))
+        } else {
+            player.play()
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(stopMusic))
+        }
     }
     
 

@@ -8,9 +8,9 @@
 import UIKit
 import AVFoundation
 
+var player: AVAudioPlayer = AVAudioPlayer()
+
 class StartViewController: UIViewController {
-    
-    var player: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
