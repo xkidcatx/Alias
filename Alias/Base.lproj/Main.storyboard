@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +74,11 @@
                         <barButtonItem title="Item" id="h7d-L7-tmz"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="MKg-ht-hII">
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="hwU-hw-Mau"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="hwU-hw-Mau">
+                            <connections>
+                                <action selector="stopMusic:" destination="BYZ-38-t0r" id="ax8-rM-MTi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -100,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="77" y="94"/>
         </scene>
-        <!--View Controller-->
+        <!--Rules View Controller-->
         <scene sceneID="Ztj-Ep-KZq">
             <objects>
-                <viewController id="EBv-bc-M18" sceneMemberID="viewController">
+                <viewController id="EBv-bc-M18" customClass="RulesViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jua-Fb-11j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,10 +133,10 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 В игру играют командами из двух или более пришельцев. Задача каждого гуманоида команды - объяснить на языке землян как можно больше слов отображаемых на экране за ограниченное земное время другими человеческими словами, используя, например, синонимы, антонимы и подсказки так, чтобы инопланетяне из вашей команды смогли перевести это на свой марсианский язык и отгадать как можно больше слов прежде чем истечет время. Чем больше земных слов отгадала команда, тем больше она заработает меж-галактических кредитов.
 
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" size="16" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
@@ -146,10 +150,10 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 При объяснении слов нельзя упоминать какую-либо часть слова. Например слово “аннигиляторная пушка” нельзя объяснять как “оружие для испепеления всего живого”. Правильный способ объяснения будет следующий: “аппарат для расщипления на атомы всего что имеет две руки и две ноги или больше”. Можно использовать синонимы - то есть вы можете сказать “испепелять”, но не “уничтожать”.
 
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" size="16" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
@@ -163,9 +167,9 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Слово “земнолюдные” могут быть  объяснено как  “антоним слова пришелец”. Вы не можете использовать инопланетные языки хоть язык землян и достаточно примитивен, за исключением тех случаев когда все гуманоиды согласились перейти на марсианский и продолжить игру на нём.
+                                        <string key="content">Слово “земнолюдные” могут быть  объяснено как  “антоним слова пришелец”. Вы не можете использовать инопланетные языки хоть язык землян и достаточно примитивен, за исключением тех случаев когда все гуманоиды согласились перейти на марсианский и продолжить игру на нём.
 
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" size="16" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
@@ -222,9 +226,9 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content"> - например, называет часть слова, указанного в карточке, слово не будет принято и пришельцы потеряют 1 кредит. Поэтому каждая инопланетная команда должна внимательно слушать объяснения других команд. Если землянское слово кажется слишком сложным, вы можете его пропустить, но помните, что за это вы потеряете кредиты и получите выстрел из бластера в колено. Однако, иногда это того стоит, так как вы можете сэкономить время (хоть и без ноги).
+                                        <string key="content"> - например, называет часть слова, указанного в карточке, слово не будет принято и пришельцы потеряют 1 кредит. Поэтому каждая инопланетная команда должна внимательно слушать объяснения других команд. Если землянское слово кажется слишком сложным, вы можете его пропустить, но помните, что за это вы потеряете кредиты и получите выстрел из бластера в колено. Однако, иногда это того стоит, так как вы можете сэкономить время (хоть и без ноги).
 
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" size="16" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
@@ -279,9 +283,9 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content"> - команда может получить бонусные кредиты за его выполнение.
+                                        <string key="content"> - команда может получить бонусные кредиты за его выполнение.
 
-Если вам удастся объяснить все слова в соответствии с заданием, по ваша команда получает бонусные кредиты, но только если другие пришельцы считают ваше выполнение убедительным. Количество бонусных кредитов определяется случайно в интервале от 7 до 10.</mutableString>
+Если вам удастся объяснить все слова в соответствии с заданием, по ваша команда получает бонусные кредиты, но только если другие пришельцы считают ваше выполнение убедительным. Количество бонусных кредитов определяется случайно в интервале от 7 до 10.</string>
                                         <attributes>
                                             <font key="NSFont" size="16" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
@@ -308,7 +312,11 @@ Cg
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8j7-5k-WXd">
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="iP7-HQ-kM0"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="iP7-HQ-kM0">
+                            <connections>
+                                <action selector="stopMusic:" destination="EBv-bc-M18" id="thJ-pp-qt5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTY-hm-Rb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
