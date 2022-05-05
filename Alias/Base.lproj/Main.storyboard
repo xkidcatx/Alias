@@ -20,30 +20,33 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UTl-Rm-Th8">
-                                <rect key="frame" x="42" y="88" width="330" height="724"/>
+                                <rect key="frame" x="42" y="88" width="330" height="675"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aliens-logo" translatesAutoresizingMaskIntoConstraints="NO" id="uIf-4k-vsa">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="352"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="327.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8cU-uX-wNd">
-                                        <rect key="frame" x="0.0" y="372" width="330" height="352"/>
+                                        <rect key="frame" x="0.0" y="347.5" width="330" height="327.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eq5-RX-q46" userLabel="New Game Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="330" height="104"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="96"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="new-game-button"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAR-bs-qKL" userLabel="Rules Button">
-                                                <rect key="frame" x="0.0" y="124" width="330" height="104"/>
+                                                <rect key="frame" x="0.0" y="116" width="330" height="95.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="rules-button"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="EBv-bc-M18" kind="show" id="o7v-nK-BCZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRF-Xn-tf3" userLabel="Settings Button">
-                                                <rect key="frame" x="0.0" y="248" width="330" height="104"/>
+                                                <rect key="frame" x="0.0" y="231.5" width="330" height="96"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="settings-button"/>
@@ -67,7 +70,13 @@
                             <constraint firstItem="UTl-Rm-Th8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sv1-YU-sG6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MKg-ht-hII"/>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="h7d-L7-tmz"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="MKg-ht-hII">
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="hwU-hw-Mau"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,12 +100,228 @@
             </objects>
             <point key="canvasLocation" x="77" y="94"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Ztj-Ep-KZq">
+            <objects>
+                <viewController id="EBv-bc-M18" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jua-Fb-11j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="461" translatesAutoresizingMaskIntoConstraints="NO" id="nKx-yH-Wbd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rulestitle" translatesAutoresizingMaskIntoConstraints="NO" id="GfZ-H1-XXs">
+                                <rect key="frame" x="20" y="88" width="374" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Ueh-3r-ud1"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gr1-Kr-UsN">
+                                <rect key="frame" x="20" y="218" width="374" height="648"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Alias: Скажи иначе">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <font key="NSOriginalFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
+В игру играют командами из двух или более пришельцев. Задача каждого гуманоида команды - объяснить на языке землян как можно больше слов отображаемых на экране за ограниченное земное время другими человеческими словами, используя, например, синонимы, антонимы и подсказки так, чтобы инопланетяне из вашей команды смогли перевести это на свой марсианский язык и отгадать как можно больше слов прежде чем истечет время. Чем больше земных слов отгадала команда, тем больше она заработает меж-галактических кредитов.
+
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Объяснение земных слов">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <font key="NSOriginalFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
+При объяснении слов нельзя упоминать какую-либо часть слова. Например слово “аннигиляторная пушка” нельзя объяснять как “оружие для испепеления всего живого”. Правильный способ объяснения будет следующий: “аппарат для расщипления на атомы всего что имеет две руки и две ноги или больше”. Можно использовать синонимы - то есть вы можете сказать “испепелять”, но не “уничтожать”.
+
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Вы можете использовать антонимы. ">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <font key="NSOriginalFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">Слово “земнолюдные” могут быть  объяснено как  “антоним слова пришелец”. Вы не можете использовать инопланетные языки хоть язык землян и достаточно примитивен, за исключением тех случаев когда все гуманоиды согласились перейти на марсианский и продолжить игру на нём.
+
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Отгаданное слово должно точно совпадать.">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <font key="NSOriginalFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Объясняющий пришелец помогает отгадывающим найти правильный перевод слова на язык землян. Если слово состоит из двух частей и кто-то отгадывает первую часть, вы потом можете использовать эту часть слова в дальнейшем объяснении.
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Начисление меж-галактических кредитов.">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <font key="NSOriginalFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <font key="NSOriginalFont" size="13" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">За каждое отгаданное слово команда получает один кредит, а за пропущенное или отгаданное с нарушением - штрафуется (в зависимости от настроек).
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Если объясняющий гуманоид допускает ошибку">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <font key="NSOriginalFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content"> - например, называет часть слова, указанного в карточке, слово не будет принято и пришельцы потеряют 1 кредит. Поэтому каждая инопланетная команда должна внимательно слушать объяснения других команд. Если землянское слово кажется слишком сложным, вы можете его пропустить, но помните, что за это вы потеряете кредиты и получите выстрел из бластера в колено. Однако, иногда это того стоит, так как вы можете сэкономить время (хоть и без ноги).
+
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="“Последнее слово для всех”">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <font key="NSOriginalFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> - если включена эта опция, по истечении времени раунда, слово могут отгадывать все команды. В этом случае 1 кредит получат марсиане отгадавшие слово.
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Победителем считается команда">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <font key="NSOriginalFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">, набравшая необходимое для победы количество кредитов. Если на момент завершения победного раунда у инопланетян одинаковое количество очков - проводится дополнительный раунд (Овертайм).
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Задания">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <font key="NSOriginalFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Если в раунде есть задание</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <font key="NSOriginalFont" size="13" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content"> - команда может получить бонусные кредиты за его выполнение.
+
+Если вам удастся объяснить все слова в соответствии с заданием, по ваша команда получает бонусные кредиты, но только если другие пришельцы считают ваше выполнение убедительным. Количество бонусных кредитов определяется случайно в интервале от 7 до 10.</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0q6-Oe-4cZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GfZ-H1-XXs" firstAttribute="top" secondItem="0q6-Oe-4cZ" secondAttribute="top" id="2Yt-bg-x7H"/>
+                            <constraint firstItem="0q6-Oe-4cZ" firstAttribute="trailing" secondItem="GfZ-H1-XXs" secondAttribute="trailing" constant="20" id="9My-BJ-ZCW"/>
+                            <constraint firstItem="nKx-yH-Wbd" firstAttribute="leading" secondItem="0q6-Oe-4cZ" secondAttribute="leading" id="Kii-VQ-WYl"/>
+                            <constraint firstItem="nKx-yH-Wbd" firstAttribute="top" secondItem="Jua-Fb-11j" secondAttribute="top" id="Ma3-yi-D9d"/>
+                            <constraint firstItem="GfZ-H1-XXs" firstAttribute="leading" secondItem="0q6-Oe-4cZ" secondAttribute="leading" constant="20" id="VPP-rh-5cl"/>
+                            <constraint firstItem="gr1-Kr-UsN" firstAttribute="leading" secondItem="0q6-Oe-4cZ" secondAttribute="leading" constant="20" id="Wwg-pj-axE"/>
+                            <constraint firstItem="0q6-Oe-4cZ" firstAttribute="trailing" secondItem="gr1-Kr-UsN" secondAttribute="trailing" constant="20" id="ddt-ge-uPD"/>
+                            <constraint firstItem="gr1-Kr-UsN" firstAttribute="top" secondItem="GfZ-H1-XXs" secondAttribute="bottom" constant="10" id="gl6-Ft-ddJ"/>
+                            <constraint firstAttribute="bottom" secondItem="gr1-Kr-UsN" secondAttribute="bottom" constant="30" id="hDQ-7y-Uos"/>
+                            <constraint firstAttribute="bottom" secondItem="nKx-yH-Wbd" secondAttribute="bottom" id="swC-qF-klI"/>
+                            <constraint firstItem="nKx-yH-Wbd" firstAttribute="trailing" secondItem="0q6-Oe-4cZ" secondAttribute="trailing" id="vt0-LM-uTa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8j7-5k-WXd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="iP7-HQ-kM0"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CTY-hm-Rb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821.7391304347827" y="580.58035714285711"/>
+        </scene>
     </scenes>
     <resources>
         <image name="461" width="1500" height="2668"/>
         <image name="aliens-logo" width="592" height="492.5"/>
         <image name="new-game-button" width="763.5" height="203.5"/>
         <image name="rules-button" width="763.5" height="203.5"/>
+        <image name="rulestitle" width="811" height="201"/>
         <image name="settings-button" width="763.5" height="203.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
