@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="461" translatesAutoresizingMaskIntoConstraints="NO" id="S2x-V1-XtJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="S2x-V1-XtJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UTl-Rm-Th8">
@@ -34,6 +34,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="new-game-button"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="ipJ-dY-5Gb" kind="show" id="v5P-xL-eI4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAR-bs-qKL" userLabel="Rules Button">
                                                 <rect key="frame" x="0.0" y="116" width="330" height="95.5"/>
@@ -112,7 +115,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="461" translatesAutoresizingMaskIntoConstraints="NO" id="nKx-yH-Wbd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="nKx-yH-Wbd">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rulestitle" translatesAutoresizingMaskIntoConstraints="NO" id="GfZ-H1-XXs">
@@ -323,14 +326,119 @@ Cg
             </objects>
             <point key="canvasLocation" x="1821.7391304347827" y="580.58035714285711"/>
         </scene>
+        <!--Game View Controller-->
+        <scene sceneID="8PM-W3-hfd">
+            <objects>
+                <viewController id="ipJ-dY-5Gb" customClass="GameViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vJR-sO-ghQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="TaV-XY-FKx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UkV-v2-Y3b">
+                                <rect key="frame" x="20" y="88" width="374" height="725"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3x-Ca-1q9" customClass="CustomProgressBar" customModule="Alias" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="0.0" width="366" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="9jn-dh-XUC"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="191" translatesAutoresizingMaskIntoConstraints="NO" id="PaB-qB-iTw">
+                                        <rect key="frame" x="0.0" y="85" width="374" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 сек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmJ-lk-QLX">
+                                                <rect key="frame" x="0.0" y="0.0" width="75.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Счет: 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qt-XG-h3a">
+                                                <rect key="frame" x="281" y="0.0" width="93" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ek2-VS-5sV"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="robotcard" translatesAutoresizingMaskIntoConstraints="NO" id="8Xy-j8-MnD">
+                                        <rect key="frame" x="0.0" y="170" width="374" height="400"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="400" id="uLK-5J-YTd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="XC1-Go-yOA">
+                                        <rect key="frame" x="37" y="625" width="300" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVN-Xl-syk" userLabel="TrueButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="B5A-4A-fgM"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="R83-5Y-Ups"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="truebutton" imageContentMode="scaleAspectFit"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vio-D2-bW6" userLabel="FalseButton">
+                                                <rect key="frame" x="200" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="1c9-dU-Tcp"/>
+                                                    <constraint firstAttribute="height" constant="100" id="PaU-nU-Eij"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="falsebutton" imageContentMode="scaleAspectFit"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="PaB-qB-iTw" secondAttribute="trailing" id="Y1D-Sl-YLA"/>
+                                    <constraint firstItem="PaB-qB-iTw" firstAttribute="leading" secondItem="UkV-v2-Y3b" secondAttribute="leading" id="fZM-Wi-Sa5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wJ7-gk-csa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UkV-v2-Y3b" firstAttribute="leading" secondItem="wJ7-gk-csa" secondAttribute="leading" constant="20" id="1tC-Tn-q3G"/>
+                            <constraint firstAttribute="trailing" secondItem="UkV-v2-Y3b" secondAttribute="trailing" constant="20" id="FuM-bB-ORu"/>
+                            <constraint firstItem="wJ7-gk-csa" firstAttribute="bottom" secondItem="UkV-v2-Y3b" secondAttribute="bottom" id="Im3-3h-NJX"/>
+                            <constraint firstItem="UkV-v2-Y3b" firstAttribute="top" secondItem="wJ7-gk-csa" secondAttribute="top" id="tHK-H3-9hH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7fd-z8-Mus">
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="SaD-di-Iqe"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressBar" destination="R3x-Ca-1q9" id="33G-x9-OW3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9wv-R0-ekj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2711.594202898551" y="-89.0625"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="461" width="1500" height="2668"/>
         <image name="aliens-logo" width="592" height="492.5"/>
+        <image name="background" width="1500" height="2668"/>
+        <image name="falsebutton" width="967" height="1065"/>
         <image name="new-game-button" width="763.5" height="203.5"/>
+        <image name="robotcard" width="655" height="518"/>
         <image name="rules-button" width="763.5" height="203.5"/>
         <image name="rulestitle" width="811" height="201"/>
         <image name="settings-button" width="763.5" height="203.5"/>
+        <image name="truebutton" width="954.5" height="1060"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
