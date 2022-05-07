@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A5544AD28265EFD0018A317 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5544AC28265EFD0018A317 /* ThemeViewController.swift */; };
+		1A827ED32827000E00945D29 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A827ED22827000E00945D29 /* ScoreViewController.swift */; };
 		1AE855E3281FF5210029752A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE855E2281FF5210029752A /* AppDelegate.swift */; };
 		1AE855E5281FF5210029752A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE855E4281FF5210029752A /* SceneDelegate.swift */; };
 		1AE855E7281FF5210029752A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE855E6281FF5210029752A /* StartViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A5544AC28265EFD0018A317 /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
+		1A827ED22827000E00945D29 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		1AE855DF281FF5210029752A /* Alias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE855E2281FF5210029752A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AE855E4281FF5210029752A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +73,9 @@
 				1AE855E6281FF5210029752A /* StartViewController.swift */,
 				1AE856242825A1E10029752A /* CustomProgressBar.swift */,
 				1AE85620282427150029752A /* RulesViewController.swift */,
+				1A827ED22827000E00945D29 /* ScoreViewController.swift */,
 				1AE855E8281FF5210029752A /* Main.storyboard */,
+				1A5544AC28265EFD0018A317 /* ThemeViewController.swift */,
 				1AE856262825A2E80029752A /* GameViewController.swift */,
 				1AE855ED281FF5230029752A /* LaunchScreen.storyboard */,
 				1AE855F62820B1AB0029752A /* Assets.xcassets */,
@@ -153,10 +159,12 @@
 			files = (
 				1AE855E7281FF5210029752A /* StartViewController.swift in Sources */,
 				1AE855E3281FF5210029752A /* AppDelegate.swift in Sources */,
+				1A5544AD28265EFD0018A317 /* ThemeViewController.swift in Sources */,
 				1AE85621282427150029752A /* RulesViewController.swift in Sources */,
 				1AE856252825A1E10029752A /* CustomProgressBar.swift in Sources */,
 				1AE856272825A2E80029752A /* GameViewController.swift in Sources */,
 				1AE855E5281FF5210029752A /* SceneDelegate.swift in Sources */,
+				1A827ED32827000E00945D29 /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
