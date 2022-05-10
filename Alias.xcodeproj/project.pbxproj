@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		1A5544AD28265EFD0018A317 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5544AC28265EFD0018A317 /* ThemeViewController.swift */; };
 		1A827ED32827000E00945D29 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A827ED22827000E00945D29 /* ScoreViewController.swift */; };
+		1AC137D02827236B008246CA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC137CF2827236B008246CA /* SettingsViewController.swift */; };
+		1AC137D2282723E8008246CA /* AliasData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC137D1282723E8008246CA /* AliasData.swift */; };
+		1AC137D42827242F008246CA /* JokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC137D32827242F008246CA /* JokeData.swift */; };
+		1AC137D62827246F008246CA /* JokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC137D52827246F008246CA /* JokeManager.swift */; };
+		1AC137DD2827D45F008246CA /* wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AC137DB2827D45F008246CA /* wrong.mp3 */; };
+		1AC137DE2827D45F008246CA /* right.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AC137DC2827D45F008246CA /* right.mp3 */; };
 		1AE855E3281FF5210029752A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE855E2281FF5210029752A /* AppDelegate.swift */; };
 		1AE855E5281FF5210029752A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE855E4281FF5210029752A /* SceneDelegate.swift */; };
 		1AE855E7281FF5210029752A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE855E6281FF5210029752A /* StartViewController.swift */; };
@@ -24,6 +30,12 @@
 /* Begin PBXFileReference section */
 		1A5544AC28265EFD0018A317 /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 		1A827ED22827000E00945D29 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		1AC137CF2827236B008246CA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1AC137D1282723E8008246CA /* AliasData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasData.swift; sourceTree = "<group>"; };
+		1AC137D32827242F008246CA /* JokeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeData.swift; sourceTree = "<group>"; };
+		1AC137D52827246F008246CA /* JokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeManager.swift; sourceTree = "<group>"; };
+		1AC137DB2827D45F008246CA /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong.mp3; sourceTree = "<group>"; };
+		1AC137DC2827D45F008246CA /* right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = right.mp3; sourceTree = "<group>"; };
 		1AE855DF281FF5210029752A /* Alias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE855E2281FF5210029752A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AE855E4281FF5210029752A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +61,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AC137CC282722C0008246CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1AE855E6281FF5210029752A /* StartViewController.swift */,
+				1AE85620282427150029752A /* RulesViewController.swift */,
+				1A827ED22827000E00945D29 /* ScoreViewController.swift */,
+				1A5544AC28265EFD0018A317 /* ThemeViewController.swift */,
+				1AE856262825A2E80029752A /* GameViewController.swift */,
+				1AC137CF2827236B008246CA /* SettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AC137CD28272300008246CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1AE856242825A1E10029752A /* CustomProgressBar.swift */,
+				1AC137D1282723E8008246CA /* AliasData.swift */,
+				1AC137D32827242F008246CA /* JokeData.swift */,
+				1AC137D52827246F008246CA /* JokeManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1AC137CE28272325008246CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1AE855E8281FF5210029752A /* Main.storyboard */,
+				1AE855ED281FF5230029752A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1AE855D6281FF5200029752A = {
 			isa = PBXGroup;
 			children = (
@@ -70,15 +115,12 @@
 			children = (
 				1AE855E2281FF5210029752A /* AppDelegate.swift */,
 				1AE855E4281FF5210029752A /* SceneDelegate.swift */,
-				1AE855E6281FF5210029752A /* StartViewController.swift */,
-				1AE856242825A1E10029752A /* CustomProgressBar.swift */,
-				1AE85620282427150029752A /* RulesViewController.swift */,
-				1A827ED22827000E00945D29 /* ScoreViewController.swift */,
-				1AE855E8281FF5210029752A /* Main.storyboard */,
-				1A5544AC28265EFD0018A317 /* ThemeViewController.swift */,
-				1AE856262825A2E80029752A /* GameViewController.swift */,
-				1AE855ED281FF5230029752A /* LaunchScreen.storyboard */,
+				1AC137CD28272300008246CA /* Model */,
+				1AC137CE28272325008246CA /* View */,
+				1AC137CC282722C0008246CA /* Controller */,
 				1AE855F62820B1AB0029752A /* Assets.xcassets */,
+				1AC137DC2827D45F008246CA /* right.mp3 */,
+				1AC137DB2827D45F008246CA /* wrong.mp3 */,
 				1AE856222824300C0029752A /* maintheme.mp3 */,
 				1AE855F0281FF5230029752A /* Info.plist */,
 			);
@@ -143,8 +185,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AC137DD2827D45F008246CA /* wrong.mp3 in Resources */,
 				1AE855EF281FF5230029752A /* LaunchScreen.storyboard in Resources */,
 				1AE855F72820B1AD0029752A /* Assets.xcassets in Resources */,
+				1AC137DE2827D45F008246CA /* right.mp3 in Resources */,
 				1AE855EA281FF5210029752A /* Main.storyboard in Resources */,
 				1AE856232824300C0029752A /* maintheme.mp3 in Resources */,
 			);
@@ -160,10 +204,14 @@
 				1AE855E7281FF5210029752A /* StartViewController.swift in Sources */,
 				1AE855E3281FF5210029752A /* AppDelegate.swift in Sources */,
 				1A5544AD28265EFD0018A317 /* ThemeViewController.swift in Sources */,
+				1AC137D02827236B008246CA /* SettingsViewController.swift in Sources */,
+				1AC137D42827242F008246CA /* JokeData.swift in Sources */,
 				1AE85621282427150029752A /* RulesViewController.swift in Sources */,
 				1AE856252825A1E10029752A /* CustomProgressBar.swift in Sources */,
 				1AE856272825A2E80029752A /* GameViewController.swift in Sources */,
 				1AE855E5281FF5210029752A /* SceneDelegate.swift in Sources */,
+				1AC137D62827246F008246CA /* JokeManager.swift in Sources */,
+				1AC137D2282723E8008246CA /* AliasData.swift in Sources */,
 				1A827ED32827000E00945D29 /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +367,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,6 +396,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
